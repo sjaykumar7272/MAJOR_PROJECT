@@ -1,7 +1,3 @@
-/* =========================================================
-   DESIGN TOKENS
-========================================================= */
-
 :root {
   --bg: #07090F;
   --bg-soft: #0D111B;
@@ -19,11 +15,11 @@
   --radius-sm: 10px;
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
 }
-
+ 
 /* =========================================================
    GLOBAL
 ========================================================= */
-
+ 
 .stApp {
   background:
     radial-gradient(900px 500px at 85% -10%, rgba(198, 255, 61, 0.08), transparent 60%),
@@ -31,43 +27,43 @@
     var(--bg);
   color: var(--text);
 }
-
+ 
 header[data-testid="stHeader"] {
   background: transparent;
 }
-
+ 
 .block-container,
 .block-container *,
 [data-testid="stSidebar"] * {
   font-family: 'AdobeClean', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
-
+ 
 /* keep icon fonts intact */
 [data-testid="stIconMaterial"],
 .material-icons,
 [class*="material-symbols"] {
   font-family: 'Material Symbols Rounded', 'Material Icons' !important;
 }
-
+ 
 .block-container {
   padding: 2.5rem 2rem 4rem !important;
   max-width: 980px !important;
 }
-
+ 
 hr {
   border-color: var(--border) !important;
   margin: 1.4rem 0 !important;
 }
-
+ 
 ::selection {
   background: var(--accent);
   color: var(--accent-ink);
 }
-
+ 
 /* =========================================================
    HERO
 ========================================================= */
-
+ 
 .hero {
   position: relative;
   padding: 2.2rem 2rem;
@@ -80,7 +76,7 @@ hr {
   box-shadow: var(--shadow);
   overflow: hidden;
 }
-
+ 
 .hero::after {
   content: "";
   position: absolute;
@@ -92,7 +88,7 @@ hr {
   background: radial-gradient(circle, rgba(198, 255, 61, 0.22), transparent 70%);
   pointer-events: none;
 }
-
+ 
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -106,7 +102,7 @@ hr {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-
+ 
 .hero-badge .dot {
   width: 8px;
   height: 8px;
@@ -115,12 +111,12 @@ hr {
   box-shadow: 0 0 0 0 rgba(198, 255, 61, 0.7);
   animation: pulse 1.8s infinite;
 }
-
+ 
 @keyframes pulse {
   70%  { box-shadow: 0 0 0 10px rgba(198, 255, 61, 0); }
   100% { box-shadow: 0 0 0 0 rgba(198, 255, 61, 0); }
 }
-
+ 
 .hero h1 {
   margin: 14px 0 6px;
   padding: 0;
@@ -133,18 +129,18 @@ hr {
   background-clip: text;
   color: transparent;
 }
-
+ 
 .hero p {
   margin: 0;
   color: var(--muted);
   font-size: 1.05rem;
   max-width: 560px;
 }
-
+ 
 /* =========================================================
    SECTION TITLES
 ========================================================= */
-
+ 
 .section-title {
   display: flex;
   align-items: center;
@@ -154,7 +150,7 @@ hr {
   font-weight: 600;
   letter-spacing: -0.01em;
 }
-
+ 
 .section-title::before {
   content: "";
   width: 4px;
@@ -162,11 +158,11 @@ hr {
   border-radius: 4px;
   background: linear-gradient(var(--accent), var(--accent-2));
 }
-
+ 
 /* =========================================================
    EMPTY STATE
 ========================================================= */
-
+ 
 .empty-state {
   padding: 2.2rem 1.6rem;
   margin: 1rem 0 1.5rem;
@@ -175,7 +171,7 @@ hr {
   background: rgba(255, 255, 255, 0.02);
   text-align: center;
 }
-
+ 
 .empty-state h2 {
   margin: 0 0 6px;
   padding: 0;
@@ -183,19 +179,19 @@ hr {
   font-weight: 600;
   color: var(--text);
 }
-
+ 
 .empty-state > p {
   margin: 0 0 1.6rem;
   color: var(--muted);
 }
-
+ 
 .steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   text-align: left;
 }
-
+ 
 .step {
   padding: 1.1rem 1.1rem 1.2rem;
   border: 1px solid var(--border);
@@ -203,12 +199,12 @@ hr {
   background: var(--surface);
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
-
+ 
 .step:hover {
   transform: translateY(-3px);
   border-color: rgba(198, 255, 61, 0.45);
 }
-
+ 
 .step .num {
   display: inline-flex;
   align-items: center;
@@ -222,28 +218,28 @@ hr {
   font-weight: 700;
   font-size: 14px;
 }
-
+ 
 .step b {
   display: block;
   margin-bottom: 2px;
   font-size: 1rem;
 }
-
+ 
 .step span {
   color: var(--muted);
   font-size: 0.9rem;
 }
-
+ 
 @media (max-width: 640px) {
   .steps { grid-template-columns: 1fr; }
   .block-container { padding: 1.5rem 1rem 3rem !important; }
   .hero { padding: 1.5rem 1.2rem; }
 }
-
+ 
 /* =========================================================
    COACH MESSAGE
 ========================================================= */
-
+ 
 .coach-bubble {
   display: flex;
   gap: 14px;
@@ -254,7 +250,7 @@ hr {
   border-radius: var(--radius);
   background: linear-gradient(135deg, rgba(198, 255, 61, 0.10), rgba(198, 255, 61, 0.02));
 }
-
+ 
 .coach-avatar {
   flex: 0 0 auto;
   display: flex;
@@ -266,7 +262,7 @@ hr {
   background: var(--accent);
   font-size: 20px;
 }
-
+ 
 .coach-label {
   font-size: 11px;
   letter-spacing: 0.1em;
@@ -274,32 +270,32 @@ hr {
   color: var(--accent);
   margin-bottom: 2px;
 }
-
+ 
 .coach-text {
   color: var(--text);
   line-height: 1.5;
 }
-
+ 
 /* =========================================================
    SIDEBAR
 ========================================================= */
-
+ 
 [data-testid="stSidebar"] {
   background: var(--bg-soft);
   border-right: 1px solid var(--border);
 }
-
+ 
 [data-testid="stSidebar"] .block-container,
 [data-testid="stSidebarUserContent"] {
   padding-top: 1.5rem !important;
 }
-
+ 
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
+ 
 .brand-logo {
   display: flex;
   align-items: center;
@@ -310,18 +306,18 @@ hr {
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   font-size: 22px;
 }
-
+ 
 .brand-name {
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.1;
 }
-
+ 
 .brand-sub {
   font-size: 0.8rem;
   color: var(--muted);
 }
-
+ 
 .user-chip {
   display: inline-flex;
   align-items: center;
@@ -334,12 +330,12 @@ hr {
   color: var(--muted);
   font-size: 0.85rem;
 }
-
+ 
 .user-chip b {
   color: var(--text);
   font-weight: 600;
 }
-
+ 
 .side-heading {
   margin: 0.2rem 0 0.6rem;
   font-size: 0.75rem;
@@ -347,7 +343,7 @@ hr {
   text-transform: uppercase;
   color: var(--muted);
 }
-
+ 
 .plan-card {
   padding: 1rem 1.1rem;
   margin-bottom: 0.8rem;
@@ -355,18 +351,18 @@ hr {
   border-radius: var(--radius);
   background: linear-gradient(135deg, rgba(198, 255, 61, 0.10), transparent);
 }
-
+ 
 .plan-card .plan-name {
   font-size: 1.1rem;
   font-weight: 600;
   margin: 6px 0 2px;
 }
-
+ 
 .plan-card .plan-meta {
   color: var(--muted);
   font-size: 0.9rem;
 }
-
+ 
 .live-pill {
   display: inline-flex;
   align-items: center;
@@ -379,7 +375,7 @@ hr {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-
+ 
 .live-pill .dot {
   width: 6px;
   height: 6px;
@@ -387,11 +383,11 @@ hr {
   background: var(--accent);
   animation: pulse 1.8s infinite;
 }
-
+ 
 /* =========================================================
    BUTTONS
 ========================================================= */
-
+ 
 .stButton button,
 .stDownloadButton button,
 [data-testid="stBaseButton-secondary"],
@@ -406,16 +402,16 @@ hr {
   padding: 0.6rem 1rem !important;
   transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease !important;
 }
-
+ 
 .stButton button:hover {
   border-color: var(--accent) !important;
   transform: translateY(-1px);
 }
-
+ 
 .stButton button:active {
   transform: translateY(0);
 }
-
+ 
 /* Primary action */
 [data-testid="stBaseButton-primary"],
 [data-testid="stBaseButton-primaryFormSubmit"] {
@@ -424,37 +420,37 @@ hr {
   border: none !important;
   box-shadow: 0 8px 24px rgba(198, 255, 61, 0.22) !important;
 }
-
+ 
 [data-testid="stBaseButton-primary"]:hover,
 [data-testid="stBaseButton-primaryFormSubmit"]:hover {
   box-shadow: 0 10px 30px rgba(198, 255, 61, 0.38) !important;
 }
-
+ 
 [data-testid="stBaseButton-primary"] p,
 [data-testid="stBaseButton-primaryFormSubmit"] p {
   color: var(--accent-ink) !important;
 }
-
+ 
 /* End workout = danger */
 .st-key-end_session_button button {
   background: rgba(255, 92, 108, 0.10) !important;
   border: 1px solid rgba(255, 92, 108, 0.5) !important;
   color: var(--danger) !important;
 }
-
+ 
 .st-key-end_session_button button:hover {
   background: rgba(255, 92, 108, 0.20) !important;
   border-color: var(--danger) !important;
 }
-
+ 
 .st-key-end_session_button button p {
   color: var(--danger) !important;
 }
-
+ 
 /* =========================================================
    INPUTS
 ========================================================= */
-
+ 
 input,
 textarea,
 [data-baseweb="select"] > div,
@@ -463,35 +459,35 @@ textarea,
 [data-testid="stNumberInputContainer"] {
   border-radius: var(--radius-sm) !important;
 }
-
+ 
 [data-baseweb="select"] > div,
 [data-baseweb="input"],
 [data-baseweb="base-input"] {
   background-color: var(--surface) !important;
   border-color: var(--border) !important;
 }
-
+ 
 [data-baseweb="select"] > div:hover,
 [data-baseweb="input"]:focus-within {
   border-color: var(--accent) !important;
 }
-
+ 
 [data-baseweb="popover"] [data-baseweb="menu"],
 [data-baseweb="popover"] ul {
   border-radius: var(--radius-sm) !important;
   background: var(--surface-2) !important;
 }
-
+ 
 label[data-testid="stWidgetLabel"] p,
 [data-testid="stWidgetLabel"] p {
   color: var(--muted);
   font-size: 0.85rem;
 }
-
+ 
 /* =========================================================
    METRICS
 ========================================================= */
-
+ 
 [data-testid="stMetric"] {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -499,32 +495,32 @@ label[data-testid="stWidgetLabel"] p,
   padding: 0.8rem 1rem;
   transition: border-color 0.2s ease;
 }
-
+ 
 [data-testid="stMetric"]:hover {
   border-color: rgba(198, 255, 61, 0.4);
 }
-
+ 
 [data-testid="stMetricLabel"] {
   opacity: 1;
 }
-
+ 
 [data-testid="stMetricLabel"] p {
   font-size: 0.75rem !important;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
 }
-
+ 
 [data-testid="stMetricValue"] {
   font-size: 1.55rem !important;
   font-weight: 700 !important;
   color: var(--text);
 }
-
+ 
 [data-testid="stSidebar"] [data-testid="stVerticalBlock"] {
   gap: 0.6rem;
 }
-
+ 
 [data-testid="stSidebar"] h3 {
   font-size: 0.75rem !important;
   letter-spacing: 0.1em;
@@ -532,23 +528,23 @@ label[data-testid="stWidgetLabel"] p,
   color: var(--muted);
   padding-top: 0.4rem;
 }
-
+ 
 /* =========================================================
    TABLE (WORKOUT HISTORY)
 ========================================================= */
-
+ 
 [data-testid="stTable"] {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface);
   overflow: hidden;
 }
-
+ 
 [data-testid="stTable"] table {
   width: 100%;
   border-collapse: collapse;
 }
-
+ 
 [data-testid="stTable"] thead th {
   background: var(--surface-2);
   color: var(--muted);
@@ -558,29 +554,29 @@ label[data-testid="stWidgetLabel"] p,
   padding: 0.8rem 1rem;
   border-bottom: 1px solid var(--border);
 }
-
+ 
 [data-testid="stTable"] td {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid var(--border);
 }
-
+ 
 [data-testid="stTable"] tbody tr:last-child td {
   border-bottom: none;
 }
-
+ 
 [data-testid="stTable"] tbody tr:hover td {
   background: rgba(198, 255, 61, 0.04);
 }
-
+ 
 /* =========================================================
    ALERTS / FORMS (login wall etc.)
 ========================================================= */
-
+ 
 [data-testid="stAlert"],
 [data-testid="stAlertContainer"] {
   border-radius: var(--radius-sm) !important;
 }
-
+ 
 .stForm,
 [data-testid="stForm"] {
   margin-top: 1.5rem !important;
@@ -590,19 +586,154 @@ label[data-testid="stWidgetLabel"] p,
   border-radius: 20px !important;
   box-shadow: var(--shadow);
 }
-
+ 
 [data-testid="stTabs"] [data-baseweb="tab-list"] {
   gap: 6px;
 }
-
+ 
 [data-testid="stTabs"] button[role="tab"] {
   border-radius: 10px 10px 0 0 !important;
 }
-
+ 
 /* =========================================================
    SCROLLBAR
 ========================================================= */
-
+ 
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-thumb { background: #222a3d; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #2e3850; }
+/* =========================================================
+   LOGIN PAGE  (Apna Coach landing look)
+   Scoped with :has(.login-root) so the dashboard is untouched
+========================================================= */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap');
+ 
+.stApp:has(.login-root) {
+  background:
+    radial-gradient(800px 480px at 55% -8%, rgba(255, 90, 45, 0.22), transparent 65%),
+    radial-gradient(rgba(255,255,255,0.045) 1px, transparent 1px) 0 0 / 22px 22px,
+    #0E0B0A;
+}
+ 
+.block-container:has(.login-root) {
+  max-width: 1180px !important;
+  padding-top: 2rem !important;
+}
+ 
+.login-root, .login-root * {
+  font-family: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+}
+ 
+.lg-top { display: flex; align-items: center; gap: 12px; margin-bottom: 2.2rem; }
+.lg-logo {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 8px;
+  background: #FF5A2D; color: #0E0B0A; font-weight: 800;
+}
+.lg-brand { font-weight: 800; font-size: 1.05rem; color: #F1ECE4; }
+ 
+.lg-eyebrow, .lg-tag, .lg-ticker {
+  font-family: 'JetBrains Mono', ui-monospace, monospace !important;
+}
+.lg-eyebrow {
+  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: #8E857B; margin-bottom: 0.8rem;
+}
+ 
+.lg-title {
+  margin: 0 0 1.2rem !important; padding: 0 !important;
+  font-size: clamp(3.6rem, 8vw, 6.6rem) !important; line-height: 0.92 !important; font-weight: 800 !important;
+  letter-spacing: -0.045em !important; color: #F1ECE4;
+  -webkit-text-fill-color: #F1ECE4; background: none;
+}
+.lg-outline {
+  color: transparent; -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #F1ECE4;
+}
+.lg-accent { color: #FF5A2D; -webkit-text-fill-color: #FF5A2D; }
+ 
+.lg-sub { max-width: 380px; margin: 0 0 1.8rem; color: #A39A90; font-size: 1.05rem; line-height: 1.45; }
+ 
+/* ---- pill form: input + inline Start button ---- */
+.stApp:has(.login-root) [data-testid="stForm"] {
+  margin: 0 !important; padding: 8px !important;
+  max-width: 460px;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+}
+.stApp:has(.login-root) [data-testid="stForm"] [data-baseweb="input"],
+.stApp:has(.login-root) [data-testid="stForm"] [data-baseweb="base-input"] {
+  background: transparent !important; border: none !important; box-shadow: none !important;
+}
+.stApp:has(.login-root) [data-testid="stForm"] input {
+  background: transparent !important; color: #F1ECE4 !important;
+  font-size: 0.98rem; padding-left: 14px !important;
+}
+.stApp:has(.login-root) [data-testid="stForm"] input::placeholder { color: #6F675F !important; }
+.stApp:has(.login-root) [data-testid="stForm"] [data-testid="stBaseButton-primaryFormSubmit"] {
+  background: #FF5A2D !important; color: #0E0B0A !important;
+  border: none !important; border-radius: 999px !important;
+  box-shadow: none !important; padding: 0.7rem 1rem !important;
+}
+.stApp:has(.login-root) [data-testid="stForm"] [data-testid="stBaseButton-primaryFormSubmit"] p {
+  color: #0E0B0A !important; font-weight: 800 !important;
+}
+.stApp:has(.login-root) [data-testid="stForm"] [data-testid="stBaseButton-primaryFormSubmit"]:hover {
+  background: #FF7549 !important; transform: translateY(-1px);
+}
+.stApp:has(.login-root) [data-testid="stForm"] [data-testid="stHorizontalBlock"] { gap: 0 !important; }
+ 
+/* ---- pose card ---- */
+.lg-card {
+  position: relative; height: 470px; overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.10); border-radius: 36px;
+  background: radial-gradient(420px 300px at 45% 35%, rgba(255, 90, 45, 0.16), transparent 70%), #141010;
+}
+.lg-fig { position: absolute; left: 50%; top: 34px; width: 310px; margin-left: -150px; overflow: visible; }
+.lg-ring { transform-box: fill-box; transform-origin: center; animation: lg-ping 1.8s ease-out infinite; }
+@keyframes lg-ping { from { opacity: .9; transform: scale(1); } to { opacity: 0; transform: scale(2.4); } }
+@property --k { syntax: '<integer>'; initial-value: 170; inherits: false; }
+@keyframes lg-knee { from { --k: 170; } to { --k: 92; } }
+.lg-deg { font-weight: 500; margin-right: -0.4em; --k: 170; animation: lg-knee 1.8s cubic-bezier(.45,0,.55,1) infinite alternate; counter-reset: k var(--k); }
+.lg-deg::after { content: counter(k); }
+.lg-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 90px; pointer-events: none;
+  background: linear-gradient(rgba(255,90,45,0), rgba(255,90,45,.10), rgba(255,90,45,0)); animation: lg-scan 4s linear infinite; }
+@keyframes lg-scan { from { transform: translateY(-90px); } to { transform: translateY(470px); } }
+.lg-tag {
+  position: absolute; display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px; border-radius: 999px; font-size: 11px; letter-spacing: 0.06em;
+  color: #F1ECE4; background: rgba(20, 16, 15, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+.lg-tag i { width: 6px; height: 6px; border-radius: 50%; background: #7CE07A; }
+.lg-tag-a { left: 28px; top: 48px; }
+.lg-tag-b { right: 24px; top: 210px; }
+.lg-tag-c { left: 50%; transform: translateX(-50%); bottom: 54px; white-space: nowrap; }
+ 
+.lg-ticker {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 0; overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 11px; letter-spacing: 0.16em; color: #8E857B; white-space: nowrap;
+}
+.lg-track { display: inline-flex; animation: lg-scroll 22s linear infinite; }
+@keyframes lg-scroll { to { transform: translateX(-50%); } }
+ 
+@media (max-width: 800px) {
+  .lg-card { height: 380px; }
+  .lg-title { font-size: 3.6rem !important; }
+}
+ 
+.stApp:has(.login-root) [data-testid="stForm"] [data-testid="stTextInputRootElement"],
+.stApp:has(.login-root) [data-testid="stForm"] [data-baseweb="input"] > div,
+.stApp:has(.login-root) [data-testid="stForm"] [data-baseweb="base-input"],
+.stApp:has(.login-root) [data-testid="stForm"] input {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #F1ECE4 !important;
+}
+.stApp:has(.login-root) [data-testid="InputInstructions"] { display: none !important; }
