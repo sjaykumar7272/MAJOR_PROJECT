@@ -15,3 +15,7 @@ Main App/data.db
 
 # Logs
 *.log
+
+# Secrets
+.streamlit/secrets.toml
+.env
