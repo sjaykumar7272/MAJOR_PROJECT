@@ -202,36 +202,92 @@ def main():
             """,
             unsafe_allow_html=True,
         )
-    else:           
+
+    else:
         context = webrtc_streamer(
         key="exercise-analysis",
         mode=WebRtcMode.SENDRECV,
         video_processor_factory=VideoProcessorClass,
+
         rtc_configuration={
-        "iceServers": [
-            {
-                "urls": ["stun:stun.l.google.com:19302"]
-            },
-            {
-                "urls": [
-                    "turn:openrelay.metered.ca:80",
-                    "turn:openrelay.metered.ca:443"
-                ],
-                "username": "openrelayproject",
-                "credential": "openrelayproject"
-            }
-        ]
+            "iceServers": [
+                {
+                    "urls": [
+                        "stun:stun.relay.metered.ca:80"
+                    ]
+                },
+                {
+                    "urls": [
+                        "turn:global.relay.metered.ca:80"
+                    ],
+                    "username": st.secrets["METERED_TURN_USERNAME"],
+                    "credential": st.secrets["METERED_TURN_PASSWORD"]
+                },
+                {
+                    "urls": [
+                        "turn:global.relay.metered.ca:80?transport=tcp"
+                    ],
+                    "username": st.secrets["METERED_TURN_USERNAME"],
+                    "credential": st.secrets["METERED_TURN_PASSWORD"]
+                },
+                {
+                    "urls": [
+                        "turn:global.relay.metered.ca:443"
+                    ],
+                    "username": st.secrets["METERED_TURN_USERNAME"],
+                    "credential": st.secrets["METERED_TURN_PASSWORD"]
+                },
+                {
+                    "urls": [
+                        "turns:global.relay.metered.ca:443?transport=tcp"
+                    ],
+                    "username": st.secrets["METERED_TURN_USERNAME"],
+                    "credential": st.secrets["METERED_TURN_PASSWORD"]
+                }
+            ]
         },
+
         media_stream_constraints={
-        "video": True,
-        "audio": False
+            "video": True,
+            "audio": False
         },
+
         async_processing=True
-        )
+    )
 
-        sync_metrics_update(context)
+    sync_metrics_update(context)
 
-        inject_webrtc_styles()
+    inject_webrtc_styles()
+    # else:           
+    #     context = webrtc_streamer(
+    #     key="exercise-analysis",
+    #     mode=WebRtcMode.SENDRECV,
+    #     video_processor_factory=VideoProcessorClass,
+    #     rtc_configuration={
+    #     "iceServers": [
+    #         {
+    #             "urls": ["stun:stun.l.google.com:19302"]
+    #         },
+    #         {
+    #             "urls": [
+    #                 "turn:openrelay.metered.ca:80",
+    #                 "turn:openrelay.metered.ca:443"
+    #             ],
+    #             "username": "openrelayproject",
+    #             "credential": "openrelayproject"
+    #         }
+    #     ]
+    #     },
+    #     media_stream_constraints={
+    #     "video": True,
+    #     "audio": False
+    #     },
+    #     async_processing=True
+    #     )
+
+    #     sync_metrics_update(context)
+
+    #     inject_webrtc_styles()
 
         
         # context = webrtc_streamer(
